@@ -1,8 +1,7 @@
-var Quiz = {
-    QA: [{
+var Quiz = [{
        question: "Who was the main villian in Avengers Infinity Wars?",
        answerChoices: ["Loki","Ultron","Thanos", "Magneto"],
-       answer:"Thanos",
+       answer: 2,
     },{
         question: "Who is the richestest hero in the Marvel Cinematic Universe?",
         a1:"Iron Man",
@@ -32,29 +31,50 @@ var Quiz = {
         a4: "Doctor Doom",
         answer:"Black Panther",
         
-    }]
-    
-};
+    }];
 var ansList = [];
+var pageTimeout;
 function question1(){
-    var q1= 
-        $("#q1").text(Quiz.QA[0].question);
-        
-        $("#button").append("<li<button> " + Quiz.QA[0].answerChoices[0] + "</button>/>");
-        $("#button").append("<li<button> " + Quiz.QA[0].answerChoices[1] + "</button>/>");
-        $("#button").append("<li<button> " + Quiz.QA[0].answerChoices[2] + "</button>/>");
-        $("#button").append("<li<button> " + Quiz.QA[0].answerChoices[3] + "</button>/>");
-        
-        // $("#button").append("<button> " + Quiz.QA[0].a1 + "</button>");
-        // $("#button").append("<button>" + Quiz.QA[0].a2 + "</button>");
-        // $("#button").append("<button>" + Quiz.QA[0].a3 +"</button>");
-        // $("#button").append(Quiz.QA[0].a4);
+    
+        $("#q1").text(Quiz[0].question);
+    
+        for(var i = 0; i< Quiz[0].answerChoices.length; i++){
+            $("#button").append("<button> " + Quiz[0].answerChoices[i] + "</button>");
+             
+        }
+        $("#q1").text(Quiz[1].question);
 
-  
-        console.log(Quiz.QA[0].question);
-    //setTimeout(q1, 30000)
+    for(var i = 0; i< Quiz[1].answerChoices.length; i++){
+        $("#button").append("<button> " + Quiz[1].answerChoices[i] + "</button>");
+         
+    }
+    $("#q1").text(Quiz[2].question);
+
+    for(var i = 0; i< Quiz[2].answerChoices.length; i++){
+        $("#button").append("<button> " + Quiz[2].answerChoices[i] + "</button>");
+         
+    }
+    $("#q1").text(Quiz[3].question);
+
+    for(var i = 0; i< Quiz[3].answerChoices.length; i++){
+        $("#button").append("<button> " + Quiz[3].answerChoices[i] + "</button>");
+         
+    }
+    $("#q1").text(Quiz[4].question);
+
+    for(var i = 0; i< Quiz[4].answerChoices.length; i++){
+        $("#button").append("<button> " + Quiz[4].answerChoices[i] + "</button>");
+         
+    }
+        // $("#button").on("click", function(event){
+        //     if(Quiz[0].answerChoices === 2){
+        //         $("#button").text("You are Correct!!!");
+        //         console.log("correct")
+        //     }
+        //     console.log(Quiz[0].answer)
+        //     console.log(Quiz[0].answerChoices)
+
+        // })
+        
 } question1();
-// a1: "Loki",
-// a2:"Ultron",
-// a3: "Thanos",
-// a4: "Magneto",
+//function rightWrong()
